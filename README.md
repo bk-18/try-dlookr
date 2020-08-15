@@ -1,6 +1,6 @@
 # try-dlookr
 
-I tries dlookr, auto-eda library.  
+I tried dlookr, auto-eda library.  
 https://github.com/choonghyunryu/dlookr  
   
 Test data come from kaggle.com.  
