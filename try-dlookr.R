@@ -3,6 +3,7 @@ library(magrittr)
 
 
 # Read --------------------------------------------------------------------
+# https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data
 df <- readr::read_csv("./input/train.csv",
                       col_types = readr::cols_only(
                         Id = readr::col_factor(), 
@@ -345,12 +346,46 @@ dlookr::eda_report(df %>%
                      dplyr::select(!Id), 
                    output_format = "html", 
                    target = SalePrice)
+# 1 Introduction
+# 1.1 Information of Dataset
+# 1.2 Information of Variables
+# 1.3 About EDA Report
+# 2 Univariate Analysis
+# 2.1 Descriptive Statistics
+# 2.2 Normality Test of Numerical Variables
+# 2.2.1 Statistics and Visualization of (Sample) Data
+# 3 Relationship Between Variables
+# 3.1 Correlation Coefficient
+# 3.1.1 Correlation Coefficient by Variable Combination
+# 3.1.2 Correlation Plot of Numerical Variables
+# 4 Target based Analysis
+# 4.1 Grouped Descriptive Statistics
+# 4.1.1 Grouped Numerical Variables
+# 4.1.2 Grouped Categorical Variables
+# 4.2 Grouped Relationship Between Variables
+# 4.2.1 Grouped Correlation Coefficient
+# 4.2.2 Grouped Correlation Plot of Numerical Variables
 
 
 
 dlookr::diagnose_report(df %>% 
                      dplyr::select(!Id), 
                    output_format = "html")
+# 1 Diagnose Data
+# 1.1 Overview of Diagnosis
+# 1.1.1 List of all variables quality
+# 1.1.2 Diagnosis of missing data
+# 1.1.3 Diagnosis of unique data(Text and Category)
+# 1.1.4 Diagnosis of unique data(Numerical)
+# 1.2 Detailed data diagnosis
+# 1.2.1 Diagnosis of categorical variables
+# 1.2.2 Diagnosis of numerical variables
+# 1.2.3 List of numerical diagnosis (zero)
+# 1.2.4 List of numerical diagnosis (minus)
+# 2 Diagnose Outliers
+# 2.1 Overview of Diagnosis
+# 2.1.1 Diagnosis of numerical variable outliers
+# 2.2 Detailed outliers diagnosis
 
 
 
@@ -358,5 +393,19 @@ dlookr::transformation_report(df %>%
                                   dplyr::select_if(is.numeric),
                                 output_format = "html",
                                 target = SalePrice)
-
+# 1 Imputation
+# 1.1 Missing Values
+# 1.1.1 Missing values imputation information
+# 1.1.2 LotFrontage
+# 1.2 Outliers
+# 1.2.1 Outliers imputation information
+# 2 Resolving Skewness
+# 2.1 Skewed variables information
+# 3 Binning
+# 3.1 Numerical Variables for Binning
+# 3.2 Binning
+# 3.2.1 MSSubClass
+# 3.2.2 LotFrontage
+# 3.2.3 LotArea
+# 3.3 Optimal Binning
 
